@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Event Management Platform</title>
+    <link type="text/css" rel="stylesheet" href="/css/styles.css">
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+    <header>
+        <div id="container">
+            <img src="./image/logo.png" alt="Logo" class="logo">
+            <h1>Welcome to Event Art </h1>
+            <p>Already member ? <a href="login.html"> Sign in</a></p>
+		<div id=container>
+			<form class="form" action="/regisDB" method="post" accept-charset="utf-8">
+				<fieldset>
+					<legend> Register </legend>
+					Email:<input type="text" name="email" value="" placeholder="" required><br>
+                    Username:<input type="text" name="username" value="" placeholder="" required><br>
+					Password: <input type="password" name="password" value="" placeholder=""><br>
+					<span id="errordisplay"></span><br>
+					<input type="submit" name="submit" value="Register">
+				</fieldset>
+			</form>	
+		</div>
+	</body>
+</html>

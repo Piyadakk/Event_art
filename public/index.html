@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index - Event Management Platform</title>
+    <link type="text/css" rel="stylesheet" href="css/styleindex.css">
+    <script src="js/feed.js" defer></script>
+</head>
+<body>
+    <div>
+        <img src="./image/logo.png" alt="Logo" class="logo">
+      </div>
+    </header>
+    
+    <main>
+        <div class="slider-container">
+            <div class="slider">
+                <img src="./image/B2.jpg" alt="Slide 1">
+                <img src="./image/B6.jpg" alt="Slide 2">
+                <img src="./image/B7.jpg" alt="Slide 3">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">←</button>
+            <button class="next" onclick="moveSlide(1)">→</button>
+        </div>
+    
+      <div class="cta-buttons">
+        <a href="/register.html" class="cta-button red">Register</a>
+        <a href="/login.html" class="cta-button blue">Log in</a>
+      </div>
+
+    <footer class="footer">
+        <div class="container">
+                &copy; <script>document.write(new Date().getFullYear())</script> Event Art 
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

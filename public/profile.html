@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Event Management Platform</title>
+    <link type="text/css" rel="stylesheet" href="css/styleprofile.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="js/profile.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/index.html">
+                <img src="./image/logo2.png" alt="Event Art Logo">
+            </a>
+        </div>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul>
+            <li><a href="/feed.html">Home</a></li>
+            <li><a href="/Profile.html">Profile</a></li>
+            <li><a href="/exhibition.html">Exhibition</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="/login.html">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="profile-header">
+        <div class="profile-container">
+            <div id="browsePic">
+                <div id="displayPic">
+                    <img src="img/avatar.png" alt="Profile Picture">
+                </div>
+                <form action="/profilepic" method="post" id="formId" enctype="multipart/form-data">
+                    <input type="file" id="fileField" name="avatar" value="fileToUpload" placeholder="" hidden>
+                </form>                
+            </div>
+            <h1 id="username">Username</h1> 
+            <p id="email">user@example.com</p>
+        </div>
+    </div>
+    <div>
+        <button : onclick="showCreateEventForm()">Create Event</button>
+    </div>
+    <div id="createEventForm">
+        <h1>Create New Event</h1>
+        <form action="/createEvent" method="POST" enctype="multipart/form-data">
+            <label for="eventImage">Event Image</label>
+            <input type="file" id="eventImage" name="event_images" accept="image/*" required>
+            
+            <label for="eventName">Event Name</label>
+            <input type="text" id="eventName" name="eventName" placeholder="Enter event name" required>
+            
+            <label for="eventDate">Date</label>
+            <input type="date" id="eventDate" name="eventDate" required>
+            
+            <label for="eventLocation">Location</label>
+            <input type="text" id="eventLocation" name="eventLocation" placeholder="Enter event location" required>
+            
+            <label for="eventSeats">Available Seats</label>
+            <input type="number" id="eventSeats" name="eventSeats" placeholder="Enter total seats" required>
+            
+            <label for="eventPrice">Price </label>
+            <input type="number" id="eventPrice" name="eventPrice" placeholder="Enter ticket price" step="0.01" required>
+            
+            <label for="eventDescription">Description</label>
+            <textarea id="eventDescription" name="eventDescription" placeholder="Enter event details" rows="5" required></textarea>
+            
+            <label for="eventLink">Event Link</label>
+            <input type="url" id="eventLink" name="eventLink" placeholder="Enter event URL" required>
+            
+            <div class="form-buttons">
+                <button type="button" class="event-button" id="createEventButton">Create Event</button>
+                <button type="button" class="cancel-button" onclick="cancelEventCreation()">Cancel</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    <div>
+        <h4>Purchase History</h4>
+        <div id="booking-history"></div>
+    </div>  
+    <footer id="contact" class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./image/logo2.png" alt="Event Art logo">
+            </div>
+            <div class="footer-social">
+                <h3>Contact Me</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>   
+    </footer>
+</body>
+</html>

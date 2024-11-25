@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Event Management</title>
+    <link type="text/css" rel="stylesheet" href="/css/styles.css">
+    <script type="text/javascript" src="/js/login.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <img src="./image/logo.png" alt="Logo" class="logo">
+        <h1>Welcome to Event Art </h1>
+        <p>Please log in to access and book your favorite events!</p>
+
+        <div id="container">
+            <form class="form" action="/checkLogin" method="post" accept-charset="utf-8">
+                <fieldset>
+                    <legend>Login</legend>
+        
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required><br>
+        
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+                    <span id="errordisplay" style="color:red;"></span><p>
+                    <input type="submit" value="Login"></p>
+                </fieldset>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>        
+</body>
+</html>
